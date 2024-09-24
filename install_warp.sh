@@ -28,9 +28,9 @@ systemctl enable wg-quick@warp
 
 systemctl start wg-quick@warp
 
-echo "ATTENTION WireGuard and WARP services have been successfully started."
+echo "WireGuard and WARP services have been successfully started."
 
-echo "ATTENTION Please note that some changes may require a reboot to fully take effect."
+echo "Please note that some changes may require a reboot to fully take effect."
 
 read -p "Do you want to reboot the system now? (Y/N): " choice
 
