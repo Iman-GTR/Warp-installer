@@ -20,7 +20,7 @@ wgcf generate
 
 apt install -y wireguard-tools resolvconf
 
-sed -i '8i Table = off' wgcf-profile.conf
+sed -i '7i Table = off' wgcf-profile.conf
 
 mv wgcf-profile.conf /etc/wireguard/warp.conf
 
