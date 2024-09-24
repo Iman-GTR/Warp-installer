@@ -9,4 +9,4 @@ To install, run the following command in your terminal:
 
 ```bash
 
-`curl -O https://raw.githubusercontent.com/Iman-GTR/warp-installer/main/install_warp.sh && cat install_warp.sh && chmod +x install_warp.sh && sudo ./install_warp.sh`
+curl -O https://raw.githubusercontent.com/Iman-GTR/warp-installer/main/install_warp.sh && cat install_warp.sh && chmod +x install_warp.sh && sudo ./install_warp.sh
