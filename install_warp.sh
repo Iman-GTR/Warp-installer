@@ -34,10 +34,16 @@ sed -i '8i Table = off' wgcf-profile.conf
 mv wgcf-profile.conf /etc/wireguard/warp.conf
 
 # فعال کردن و شروع سرویس
-systemctl enable --now wg-quick@warp
+systemctl enable wg-quick@warp
 
-# Ask user about reboot
-read -p "The server needs to reboot for proper functionality. Do you want to reboot now? (Y/N): " choice
+# راه‌اندازی سرویس‌های WireGuard و WARP
+systemctl start wg-quick@warp
+
+echo "WireGuard and WARP services have been successfully started."
+echo "Please note that some changes may require a reboot to fully take effect."
+
+# پرسیدن از کاربر درباره ریبوت
+read -p "Do you want to reboot the system now? (Y/N): " choice
 
 case "$choice" in 
   y|Y ) 
@@ -45,9 +51,9 @@ case "$choice" in
     reboot
     ;;
   n|N ) 
-    echo "Reboot cancelled. Please remember to reboot your system later for the changes to take effect."
+    echo "Reboot cancelled. Please remember to reboot your system later for all changes to take effect."
     ;;
   * ) 
-    echo "Invalid input. Reboot cancelled. Please remember to reboot your system later for the changes to take effect."
+    echo "Invalid input. Reboot cancelled. Please remember to reboot your system later for all changes to take effect."
     ;;
 esac
